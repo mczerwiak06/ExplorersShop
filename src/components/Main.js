@@ -4,7 +4,7 @@ import ProductDetails from "./ProductDetails";
 import data from "../data";
 
 export default function Main(props){
-    const {products, onAdd, onDetails, productToApp} = props;
+    const {products, onAdd, onDetails, productToApp, closeProductDetails} = props;
     return (
         <main className="products">
             <div>
@@ -14,7 +14,7 @@ export default function Main(props){
             <div className="products">
 
                 {products.map((product) => (
-                    <Product key={product.id} product={product} onAdd={onAdd} onDetails={onDetails} productToApp={productToApp}/>
+                    <Product key={product.id} product={product} onAdd={onAdd} onDetails={onDetails} productToApp={productToApp} closeProductDetails={closeProductDetails}/>
                 ))}
 
             </div>

@@ -8,10 +8,18 @@ import ProductDetails from "./components/ProductDetails";
 export default function App(){
     const[basketVisible, setBaketVisible] = useState(false);
     const[detailsVisible, setDetailsVisible] = useState(false);
+    const[mainVisible, setMainVisible] = useState(true);
 
+    //wyświetlenie szczegółów produktu
     const productToApp = (dataToPass) => {
         setDetailsVisible(true);
-        console.log("jestem")
+        setMainVisible(false);
+        //console.log("jestem")
+    }
+    //zamknięcie szczegółów produktu
+    const closeProductDetails = (closeData) => {
+        setDetailsVisible(false);
+        setMainVisible(true);
     }
 
     const onDetails = (product) =>{
@@ -20,12 +28,18 @@ export default function App(){
         console.log(product.id);
 
     }
-
+    //wyświetlenie koszyka
     const childToParent = (childdata) => {
         setBaketVisible(true);
+        setMainVisible(false);
+    }
+    //zamknięcie koszyka
+    const closeBasket = (basketCloseData) => {
+        setBaketVisible(false);
+        setMainVisible(true);
     }
 
-    //wyswietlanie koszyka
+    //obsługa koszyka
     const {products} = data;
     const [cartItems, setCartItems] = useState([]);
     const [itemDetails, setItemDetails] = useState([]);
@@ -62,9 +76,9 @@ export default function App(){
         <div className="App">
             <Header childToParent={childToParent} countCartItems={cartItems.length}/>
             <div className="row">
-                <Main onAdd={onAdd} onDetails={onDetails}  productToApp={productToApp} products={products}/>
-                {basketVisible &&<Basket onAdd={onAdd} onRemove={onRemove}  cartItems={cartItems}/>}
-                {detailsVisible &&<ProductDetails onAdd={onAdd} onRemove={onRemove}   itemDetails={itemDetails}/>}
+                {mainVisible &&<Main onAdd={onAdd} onDetails={onDetails}  productToApp={productToApp}  products={products}/>}
+                {basketVisible &&<Basket onAdd={onAdd} onRemove={onRemove}  closeBasket={closeBasket} cartItems={cartItems}/>}
+                {detailsVisible &&<ProductDetails onAdd={onAdd} onRemove={onRemove}   closeProductDetails={closeProductDetails} itemDetails={itemDetails}/>}
 
             </div>
         </div>

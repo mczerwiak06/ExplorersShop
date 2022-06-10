@@ -1,16 +1,18 @@
 import React from "react";
 
 export default function Basket(props){
-    const {cartItems, onAdd, onRemove} = props;
+    const {cartItems, onAdd, onRemove, closeBasket} = props;
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0);
     const shippingPrice = itemsPrice > 300 ? 0 : 20;
     const taxPrice = itemsPrice * 0.23;
     const totalPrice = itemsPrice + shippingPrice;
+    const closeBasketData = 1;
     return (
         <aside className="block col-1">
             <h2>Twój koszyk</h2>
             <div>
-                {cartItems.length === 0 &&<div>Koszyk pusty. Jak to możliwe?</div>}
+                {cartItems.length === 0 &&<div><div>Koszyk pusty. Jak to możliwe?</div><button onClick={() => closeBasket(closeBasketData)}>Zamknij</button></div>}
+
             </div>
             {cartItems.map((item) => (
                <div key={item.id} className="row">
@@ -47,6 +49,7 @@ export default function Basket(props){
                 <div className="row">
                     <button onClick={()=> alert ("Implement checkout")}>Checkout</button>
                 </div>
+                    <button onClick={() => closeBasket(closeBasketData)}>Zamknij</button>
                 </>
             )}
         </aside>
