@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function ProductDetails(props){
-    const {itemDetails, onAdd, closeProductDetails} = props;
+    const {itemDetails, onAdd, closeProductDetails, passQuantity, productDataFromMainToProduct} = props;
     const closeData =1;
+    const[quantity, setQuantity] = useState(1);
+
+    function handleChange(event) {
+        setQuantity(event.target.value);
+       // console.log(quantity);
+
+    }
     return (
         <aside className="block col-1">
             <h2>Details</h2>
@@ -19,8 +26,15 @@ export default function ProductDetails(props){
 
                 </div>
             ))}
+            <form>
+                <input
+                    type='text'
+                    placeholder='0'
+                    onChange={handleChange}
+                    />
             <button onClick={() => closeProductDetails(closeData)}>Zamknij</button>
-
+            <button onMouseOver={() => {passQuantity(quantity)}} onClick={() => {onAdd(productDataFromMainToProduct)}}>Do koszyka</button>
+            </form>
         </aside>
     )
 }

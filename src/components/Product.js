@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Product(props){
-    const {product, onAdd, onDetails, productToApp} = props;
+    const {product, onAdd, onDetails, productToApp, getProductDataFromProduct} = props;
     const dataToPass = 1;
     return (
         <div className="product">
@@ -13,6 +13,7 @@ export default function Product(props){
                 <button onClick={() => {
                     onDetails(product);
                     productToApp(dataToPass);
+                    getProductDataFromProduct(product);
                 }}>Szczegóły</button>
             </div>
         </div>

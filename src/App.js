@@ -9,12 +9,30 @@ export default function App(){
     const[basketVisible, setBaketVisible] = useState(false);
     const[detailsVisible, setDetailsVisible] = useState(false);
     const[mainVisible, setMainVisible] = useState(true);
+//przekazanie obiektu product z Main
+    const[productDataFromMainToProduct, setProductDataFromMainToProduct] = useState(null);
+    const getProductDataFromMain = (product1) => {
+        setProductDataFromMainToProduct(product1);
+        console.log(productDataFromMainToProduct);
+    }
+    //przekazanie obiektu product do productDetails
+    const [productDataToProductDetails, setProductDataToProductDetails] = useState(null);
+    const postProductDataToProductDetails = (productDataFromMainToProduct) => {
+        setProductDataToProductDetails(productDataFromMainToProduct);
+        console.log(productDataToProductDetails);
+    }
+
+    //obsługa quantity
+    const[quantityToAdd, setQuantityToAdd] = useState(1);
+    const passQuantity = (quantity) => {
+        setQuantityToAdd(quantity);
+        console.log(quantityToAdd);
+    }
 
     //wyświetlenie szczegółów produktu
     const productToApp = (dataToPass) => {
         setDetailsVisible(true);
         setMainVisible(false);
-        //console.log("jestem")
     }
     //zamknięcie szczegółów produktu
     const closeProductDetails = (closeData) => {
@@ -24,8 +42,6 @@ export default function App(){
 
     const onDetails = (product) =>{
         setItemDetails([product]);
-        //setDetailsVisible(true);
-        console.log(product.id);
 
     }
     //wyświetlenie koszyka
@@ -54,8 +70,9 @@ export default function App(){
                 )
             );
         } else {
-            setCartItems([...cartItems, {...product, qty: 1}]);
-        }
+            setCartItems([...cartItems, {...product, qty: parseInt(quantityToAdd)}]);
+        };
+        setQuantityToAdd(1);
     };
     const onRemove = (product) => {
         //spr czy produkt istnieje w koszyku
@@ -66,7 +83,7 @@ export default function App(){
         } else {
             setCartItems(
                 cartItems.map((x) =>
-                    x.id === product.id ? {...exist, qty: exist.qty + -1} : x
+                    x.id === product.id ? {...exist, qty: exist.qty + - 1} : x
                 )
             );
         }
@@ -76,9 +93,10 @@ export default function App(){
         <div className="App">
             <Header childToParent={childToParent} countCartItems={cartItems.length}/>
             <div className="row">
-                {mainVisible &&<Main onAdd={onAdd} onDetails={onDetails}  productToApp={productToApp}  products={products}/>}
+                {mainVisible &&<Main onAdd={onAdd} onDetails={onDetails}  productToApp={productToApp}  getProductDataFromMain={getProductDataFromMain} products={products}/>}
                 {basketVisible &&<Basket onAdd={onAdd} onRemove={onRemove}  closeBasket={closeBasket} cartItems={cartItems}/>}
-                {detailsVisible &&<ProductDetails onAdd={onAdd} onRemove={onRemove}   closeProductDetails={closeProductDetails} itemDetails={itemDetails}/>}
+                {detailsVisible &&<ProductDetails onAdd={onAdd} onRemove={onRemove}   closeProductDetails={closeProductDetails} passQuantity={passQuantity}
+                    itemDetails={itemDetails} productDataFromMainToProduct={productDataFromMainToProduct}/>}
 
             </div>
         </div>
