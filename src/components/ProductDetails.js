@@ -7,9 +7,8 @@ export default function ProductDetails(props){
 
     function handleChange(event) {
         setQuantity(event.target.value);
-       // console.log(quantity);
-
     }
+
     return (
         <aside className="block col-1">
             <h2>Details</h2>
@@ -29,11 +28,11 @@ export default function ProductDetails(props){
             <form>
                 <input
                     type='text'
-                    placeholder='0'
+                    placeholder='1'
                     onChange={handleChange}
                     />
             <button onClick={() => closeProductDetails(closeData)}>Zamknij</button>
-            <button onMouseOver={() => {passQuantity(quantity)}} onClick={() => {onAdd(productDataFromMainToProduct)}}>Do koszyka</button>
+            <button type="button" onMouseOver={() => {passQuantity(quantity)}} onClick={() => {onAdd(productDataFromMainToProduct)}}>Do koszyka</button>
             </form>
         </aside>
     )

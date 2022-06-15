@@ -66,13 +66,13 @@ export default function App(){
         if (exist) {
             setCartItems(
                 cartItems.map((x) =>
-                    x.id === product.id ? {...exist, qty: exist.qty + 1} : x
+                    x.id === product.id ? {...exist, qty: exist.qty + parseInt(quantityToAdd)} : x
                 )
             );
         } else {
             setCartItems([...cartItems, {...product, qty: parseInt(quantityToAdd)}]);
-        };
-        setQuantityToAdd(1);
+        }
+         setQuantityToAdd(1);
     };
     const onRemove = (product) => {
         //spr czy produkt istnieje w koszyku
@@ -83,7 +83,7 @@ export default function App(){
         } else {
             setCartItems(
                 cartItems.map((x) =>
-                    x.id === product.id ? {...exist, qty: exist.qty + - 1} : x
+                    x.id === product.id ? {...exist, qty: exist.qty - 1} : x
                 )
             );
         }
