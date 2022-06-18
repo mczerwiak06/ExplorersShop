@@ -5,12 +5,12 @@ import Basket from "./components/Basket";
 import data from "./data";
 import ProductDetails from "./components/ProductDetails";
 
-export default function App(){
-    const[basketVisible, setBaketVisible] = useState(false);
-    const[detailsVisible, setDetailsVisible] = useState(false);
-    const[mainVisible, setMainVisible] = useState(true);
+export default function App() {
+    const [basketVisible, setBaketVisible] = useState(false);
+    const [detailsVisible, setDetailsVisible] = useState(false);
+    const [mainVisible, setMainVisible] = useState(true);
 //przekazanie obiektu product z Main
-    const[productDataFromMainToProduct, setProductDataFromMainToProduct] = useState(null);
+    const [productDataFromMainToProduct, setProductDataFromMainToProduct] = useState(null);
     const getProductDataFromMain = (product1) => {
         setProductDataFromMainToProduct(product1);
         console.log(productDataFromMainToProduct);
@@ -23,7 +23,7 @@ export default function App(){
     }
 
     //obsługa quantity
-    const[quantityToAdd, setQuantityToAdd] = useState(1);
+    const [quantityToAdd, setQuantityToAdd] = useState(1);
     const passQuantity = (quantity) => {
         setQuantityToAdd(quantity);
         console.log(quantityToAdd);
@@ -40,7 +40,7 @@ export default function App(){
         setMainVisible(true);
     }
 
-    const onDetails = (product) =>{
+    const onDetails = (product) => {
         setItemDetails([product]);
 
     }
@@ -72,7 +72,7 @@ export default function App(){
         } else {
             setCartItems([...cartItems, {...product, qty: parseInt(quantityToAdd)}]);
         }
-         setQuantityToAdd(1);
+        setQuantityToAdd(1);
     };
     const onRemove = (product) => {
         //spr czy produkt istnieje w koszyku
@@ -89,14 +89,19 @@ export default function App(){
         }
     }
 
-    return(
+    return (
         <div className="App">
             <Header childToParent={childToParent} countCartItems={cartItems.length}/>
             <div className="row">
-                {mainVisible &&<Main onAdd={onAdd} onDetails={onDetails}  productToApp={productToApp}  getProductDataFromMain={getProductDataFromMain} products={products}/>}
-                {basketVisible &&<Basket onAdd={onAdd} onRemove={onRemove}  closeBasket={closeBasket} cartItems={cartItems}/>}
-                {detailsVisible &&<ProductDetails onAdd={onAdd} onRemove={onRemove}   closeProductDetails={closeProductDetails} passQuantity={passQuantity}
-                    itemDetails={itemDetails} productDataFromMainToProduct={productDataFromMainToProduct}/>}
+                {mainVisible && <Main onAdd={onAdd} onDetails={onDetails} productToApp={productToApp}
+                                      getProductDataFromMain={getProductDataFromMain} products={products}/>}
+                {basketVisible &&
+                    <Basket onAdd={onAdd} onRemove={onRemove} closeBasket={closeBasket} cartItems={cartItems}/>}
+                {detailsVisible &&
+                    <ProductDetails onAdd={onAdd} onRemove={onRemove} closeProductDetails={closeProductDetails}
+                                    passQuantity={passQuantity}
+                                    itemDetails={itemDetails}
+                                    productDataFromMainToProduct={productDataFromMainToProduct}/>}
 
             </div>
         </div>

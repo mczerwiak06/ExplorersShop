@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function Product(props){
+export default function Product(props) {
     const {product, onAdd, onDetails, productToApp, getProductDataFromProduct} = props;
     const dataToPass = 1;
     return (
         <div className="product">
             <img className="small" src={product.image} alt={product.name}></img>
-                <h3>{product.name}</h3>
+            <h3>{product.name}</h3>
             <div>{product.price}zł</div>
             <div>
                 <button onClick={() => onAdd(product)}>Dodaj do koszyka</button>
@@ -14,7 +14,8 @@ export default function Product(props){
                     onDetails(product);
                     productToApp(dataToPass);
                     getProductDataFromProduct(product);
-                }}>Szczegóły</button>
+                }}>Szczegóły
+                </button>
             </div>
         </div>
     )

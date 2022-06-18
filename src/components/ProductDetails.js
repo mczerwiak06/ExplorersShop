@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
-export default function ProductDetails(props){
+export default function ProductDetails(props) {
     const {itemDetails, onAdd, closeProductDetails, passQuantity, productDataFromMainToProduct} = props;
-    const closeData =1;
-    const[quantity, setQuantity] = useState(1);
+    const closeData = 1;
+    const [quantity, setQuantity] = useState(1);
 
     function handleChange(event) {
         setQuantity(event.target.value);
@@ -30,9 +30,14 @@ export default function ProductDetails(props){
                     type='text'
                     placeholder='1'
                     onChange={handleChange}
-                    />
-            <button onClick={() => closeProductDetails(closeData)}>Zamknij</button>
-            <button type="button" onMouseOver={() => {passQuantity(quantity)}} onClick={() => {onAdd(productDataFromMainToProduct)}}>Do koszyka</button>
+                />
+                <button onClick={() => closeProductDetails(closeData)}>Zamknij</button>
+                <button type="button" onMouseOver={() => {
+                    passQuantity(quantity)
+                }} onClick={() => {
+                    onAdd(productDataFromMainToProduct)
+                }}>Do koszyka
+                </button>
             </form>
         </aside>
     )

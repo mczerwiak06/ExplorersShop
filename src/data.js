@@ -1,16 +1,18 @@
 const data = {
     products: [
-        {id: '1',
-        name: 'DMM Dragon Cam 00 (Blue)',
-        price: 220.99,
-        image: 'https://www.skubank.com/imagestore/product/11981/33/160789/c63_11981_A73500A-dragon-cam-00.jpg',
-        details: 'Friend wspinaczkowy DMM Dragon Cam Size 00 posiada kuty na gorąco zacisk kciuka. Zapewnia on' +
-            ' stabilną obsługę i redukuje przypadkowe ruchy rąk podczas zakładania. Jest on także niezwykle ' +
-            'wygodny w użyciu z rękawicami. Friend wyposażony został w krzywki TripleGrid, które dzięki ' +
-            'zwiększonej powierzchni styku pozwalają zwiększyć tarcie w frienda w skale. Oznaczenie odpowiednich' +
-            ' rozmiarów friendów za pomocą różnych kolorów ułatwia ich szybką identyfikację podczas wspinaczki.',
+        {
+            id: '1',
+            name: 'DMM Dragon Cam 00 (Blue)',
+            price: 220.99,
+            image: 'https://www.skubank.com/imagestore/product/11981/33/160789/c63_11981_A73500A-dragon-cam-00.jpg',
+            details: 'Friend wspinaczkowy DMM Dragon Cam Size 00 posiada kuty na gorąco zacisk kciuka. Zapewnia on' +
+                ' stabilną obsługę i redukuje przypadkowe ruchy rąk podczas zakładania. Jest on także niezwykle ' +
+                'wygodny w użyciu z rękawicami. Friend wyposażony został w krzywki TripleGrid, które dzięki ' +
+                'zwiększonej powierzchni styku pozwalają zwiększyć tarcie w frienda w skale. Oznaczenie odpowiednich' +
+                ' rozmiarów friendów za pomocą różnych kolorów ułatwia ich szybką identyfikację podczas wspinaczki.',
         },
-        {id: '2',
+        {
+            id: '2',
             name: 'DMM Dragon Cam 1 (Purple)',
             price: 235.79,
             image: 'https://www.skubank.com/imagestore/product/11981/33/160788/c63_11981_A7351A-dragon-cam1.jpg',
@@ -20,7 +22,8 @@ const data = {
                 ' zwiększonej powierzchni styku pozwalają zwiększyć tarcie w frienda w skale. Oznaczenie' +
                 ' odpowiednich rozmiarów friendów za pomocą różnych kolorów ułatwia ich szybką identyfikację podczas wspinaczki.',
         },
-        {id: '3',
+        {
+            id: '3',
             name: 'DMM Dragon Cam 3 (Red)',
             price: 250.29,
             image: 'https://www.skubank.com/imagestore/product/11981/33/160784/c63_11981_A7353A-dragon-cam-3.jpg',
@@ -30,7 +33,8 @@ const data = {
                 ' zwiększonej powierzchni styku pozwalają zwiększyć tarcie w frienda w skale. Oznaczenie odpowiednich' +
                 ' rozmiarów friendów za pomocą różnych kolorów ułatwia ich szybką identyfikację podczas wspinaczki.',
         },
-        {id: '4',
+        {
+            id: '4',
             name: 'Ekspres wspinaczkowy CT',
             price: 57.99,
             image: 'https://8a.pl/media/catalog/product/e/k/ekspres-wspinaczkowy-climbing-technology-aerial-pro-set-ny-12cm-blue-1653025693.jpg',
@@ -38,7 +42,8 @@ const data = {
                 ' w którym ultralekkie, kute na gorąco karabinki połączono z poliamidową, poszerzaną taśmą.' +
                 ' Całość gwarantuje fantastyczne właściwości podczas zmagań na typowo sportowych drogach.',
         },
-        {id: '5',
+        {
+            id: '5',
             name: 'Ekspres wspinaczkowy CT Lime',
             price: 60.99,
             image: 'https://8a.pl/media/catalog/product/e/k/ekspres-wspinaczkowy-climbing-technology-lime-set-dy-12-cm-green-1652087922.jpg',
@@ -47,7 +52,8 @@ const data = {
                 ' wykorzystuje bezząbkowe zamki typu keylock, ultralekką taśmę dyneema i system Fixit. Do tego' +
                 ' oferowany jest w wersji z kolorową, anodyzowaną powłoką.'
         },
-        {id: '6',
+        {
+            id: '6',
             name: 'Lina Beal 9,1mm 50m',
             price: 500.99,
             image: 'https://8a.pl/media/catalog/product/l/i/lina-wspinaczkowa-beal-joker-9-1-mm-50m-unicore-dry-cover-orange-1653292780.jpg',
@@ -58,7 +64,8 @@ const data = {
                 ' po prostu nie zadziałać - stosowanie tego modelu zaleca się osobom z bardzo dużym doświadczeniem, po sprawdzeniu' +
                 ' kompatybilności liny z posiadanym przyrządem.',
         },
-        {id: '7',
+        {
+            id: '7',
             name: 'Lina Beal 8,5mm 50m',
             price: 512.99,
             image: 'https://8a.pl/media/catalog/product/l/i/lina-wspinaczkowa-beal-opera-8-5-mm-50m-unicore-dry-cover-green-1653291587.jpg',
@@ -75,7 +82,8 @@ const data = {
                 ' — stosowanie tego modelu zaleca się osobom z bardzo dużym doświadczeniem, po sprawdzeniu kompatybilności liny z posiadanym ' +
                 'przyrządem.',
         },
-        {id: '8',
+        {
+            id: '8',
             name: 'Lina Beal 9,8mm 70m',
             price: 566.99,
             image: 'https://8a.pl/media/catalog/product/l/i/lina-wspinaczkowa-beal-karma-9-8-mm-70m-yellow-1653291831.jpg',
@@ -94,7 +102,8 @@ const data = {
                 'zaawansowanej technologii, która zapewnia doskonałe pochłanianie uderzeń dzięki niewielkim siłom uderzenia. Cechuje ' +
                 'ją doskonały stosunek ceny do jakości oraz ekologiczna konstrukcja - bez obróbki chemicznej i stosowania dodatkowych powłok.',
         },
-        {id: '9',
+        {
+            id: '9',
             name: 'Zestaw ekspresów CT',
             price: 350.99,
             image: 'https://8a.pl/media/catalog/product/z/e/zestaw-ekspresow-climbing-technology-aerial-pro-set-dy-12-cm-x6-1650530888.jpg',
@@ -107,14 +116,16 @@ const data = {
                 'kształt samego zamka, zmieniając ułożenie żłobień, co w konsekwencji umożliwia jego pewniejsze i łatwiejsze otwieranie w ' +
                 'każdej sytuacji.',
         },
-        {id: '10',
+        {
+            id: '10',
             name: 'Woreczek na magnezję',
             price: 54.99,
             image: 'https://8a.pl/media/catalog/product/w/o/woreczek-na-magnezje-e9-aglio-c-wine-1652775810.jpg',
             details: 'Woreczek na magnezję E9 Aglio C doskonale spisze się w najtrudniejszych warunkach. Dzięki niemu zyskasz szybki' +
                 ' dostęp do magnezji, a jego niska waga ucieszy łojantów liczących każdy gram swojego szpeju.',
         },
-        {id: '11',
+        {
+            id: '11',
             name: 'Czekan Grivel Ghost Evo',
             price: 386.99,
             image: 'https://8a.pl/media/catalog/product/c/z/czekan_grivel_ghost_evo_hammer_yellow_1631185462_d030.jpg',
@@ -126,7 +137,8 @@ const data = {
                 ' Specjalnie zaprojektowany trzonek G-Bone zapewnia doskonały chwyt. Czekan górski Grivel Ghost Evo' +
                 ' posiada certyfikację CE EN 13089, typ 1, UIAA 152 i waży jedynie ok. 309 g.',
         },
-        {id: '12',
+        {
+            id: '12',
             name: 'Czekan Grivel G Zero',
             price: 236.99,
             image: 'https://8a.pl/media/catalog/product/c/z/czekan_grivel_g_zero_pink_1631282594_0c52.jpg',
@@ -141,7 +153,8 @@ const data = {
                 ' wbija się nawet w zmrożony śnieg, przez co można skutecznie asekurować się czekanem podczas podchodzenia stromymi' +
                 ' zboczami',
         },
-        {id: '13',
+        {
+            id: '13',
             name: 'Raki automatyczne Grivel G12',
             price: 590.39,
             image: 'https://8a.pl/media/catalog/product/r/a/raki_automatyczne_grivel_g12_cramp_o_matic_evo_1637653664_ecf7.jpg',
@@ -153,7 +166,8 @@ const data = {
                 'i cieńsza w pozostałych miejscach. Dzięki temu raki te wyróżniają się doskonałą penetracją lodu oraz wysokim poziomem' +
                 ' wsparcia. Zęby atakujące można ponadto łatwo wymienić w razie ich wysokiego zużycia.',
         },
-        {id: '14',
+        {
+            id: '14',
             name: 'Sonda lawinowa BD Quickdraw',
             price: 359.99,
             image: 'https://8a.pl/media/catalog/product/s/o/sonda-lawinowa-black-diamond-quickdraw-pro-probe-320-green-1622551618.jpg',
@@ -162,7 +176,8 @@ const data = {
                 ' niską wagą. Sonda lawinowa Black Diamond Quickdraw Pro Probe 320 wyposażona została w szybkozłączki Quickdraw,' +
                 ' oraz posiada specjalne oznaczenia zastosowane co 1 m.',
         },
-        {id: '15',
+        {
+            id: '15',
             name: 'Detektor lawinowy Ortovox',
             price: 1183.99,
             image: 'https://8a.pl/media/catalog/product/d/e/detektor-lawinowy-ortovox-diract-voice-blue-ocean-1645169493.jpg',
@@ -176,7 +191,8 @@ const data = {
                 ' zminimalizowania ryzyka popełnienia błędu w sytuacjach stresowych wyposażony został także w kontrastowy' +
                 ' przełącznik trybów wyszukiwania/nadawania.',
         },
-        {id: '16',
+        {
+            id: '16',
             name: 'Śruba lodowa Petzl Laser 13cm',
             price: 189.99,
             image: 'https://8a.pl/media/catalog/product/s/r/sruba-lodowa-petzl-laser-13cm-1646042577.jpg',
@@ -189,7 +205,8 @@ const data = {
                 'uchwyt dobrze leży w dłoni. Śruba wykonana została z połączenia stali i lekkiego aluminium,' +
                 ' oraz posiada certyfikację CE EN 568, UIAA 151.',
         },
-        {id: '17',
+        {
+            id: '17',
             name: 'Szabla śnieżna CT 50cm',
             price: 127.91,
             image: 'https://8a.pl/media/catalog/product/s/z/szabla_sniezna_climbing_technology_snow_anchor_50cm_1646210179_385d.jpg',
@@ -200,7 +217,8 @@ const data = {
                 'lekkiego stopu aluminium. W górnej części zainstalowano pętlę ze stalowej linki, natomiast sama szabla na całej' +
                 ' długości posiada otwory. Dół został tak ukształtowany, aby maksymalnie ułatwić osadzanie szabli w śniegu.',
         },
-        {id: '18',
+        {
+            id: '18',
             name: 'Lonża do czekana Grivel',
             price: 168.47,
             image: 'https://8a.pl/media/catalog/product/l/o/lonza_grivel_double_spring_screw_lock_1570447927_4c6c.jpg',
