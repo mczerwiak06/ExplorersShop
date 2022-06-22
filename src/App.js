@@ -4,6 +4,11 @@ import Main from "./components/Main";
 import Basket from "./components/Basket";
 import data from "./data";
 import ProductDetails from "./components/ProductDetails";
+import Contact from "./components/Contact";
+import {Routes, Route} from "react-router-dom";
+import Shipping from "./components/Shipping";
+import Home from "./components/Home";
+
 
 export default function App() {
     const [basketVisible, setBaketVisible] = useState(false);
@@ -13,20 +18,20 @@ export default function App() {
     const [productDataFromMainToProduct, setProductDataFromMainToProduct] = useState(null);
     const getProductDataFromMain = (product1) => {
         setProductDataFromMainToProduct(product1);
-        console.log(productDataFromMainToProduct);
+        //console.log(productDataFromMainToProduct);
     }
     //przekazanie obiektu product do productDetails
     const [productDataToProductDetails, setProductDataToProductDetails] = useState(null);
     const postProductDataToProductDetails = (productDataFromMainToProduct) => {
         setProductDataToProductDetails(productDataFromMainToProduct);
-        console.log(productDataToProductDetails);
+        // console.log(productDataToProductDetails);
     }
 
     //obsługa quantity
     const [quantityToAdd, setQuantityToAdd] = useState(1);
     const passQuantity = (quantity) => {
         setQuantityToAdd(quantity);
-        console.log(quantityToAdd);
+        //console.log(quantityToAdd);
     }
 
     //wyświetlenie szczegółów produktu
@@ -48,6 +53,7 @@ export default function App() {
     const childToParent = (childdata) => {
         setBaketVisible(true);
         setMainVisible(false);
+        setDetailsVisible(false);
     }
     //zamknięcie koszyka
     const closeBasket = (basketCloseData) => {
@@ -90,6 +96,7 @@ export default function App() {
     }
 
     return (
+
         <div className="App">
             <Header childToParent={childToParent} countCartItems={cartItems.length}/>
             <div className="row">
@@ -102,7 +109,11 @@ export default function App() {
                                     passQuantity={passQuantity}
                                     itemDetails={itemDetails}
                                     productDataFromMainToProduct={productDataFromMainToProduct}/>}
-
+                <Routes>
+                    <Route path="/contact" element={<Contact/>}/>
+                    <Route path="/shipping" element={<Shipping/>}/>
+                    <Route path="/home" element={<Home/>}/>
+                </Routes>
             </div>
         </div>
     )

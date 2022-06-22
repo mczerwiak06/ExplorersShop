@@ -13,6 +13,7 @@ export default function Main(props) {
         <main className="products">
             <div>
                 <h2>Nasze produkty</h2>
+
             </div>
 
             <div className="products">

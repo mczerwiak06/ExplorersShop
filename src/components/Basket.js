@@ -8,7 +8,7 @@ export default function Basket(props) {
     const totalPrice = itemsPrice + shippingPrice;
     const closeBasketData = 1;
     return (
-        <aside className="block col-1">
+        <div className="block col-1">
             <h2>Twój koszyk</h2>
             <div>
                 {cartItems.length === 0 && <div>
@@ -55,6 +55,6 @@ export default function Basket(props) {
                     <button onClick={() => closeBasket(closeBasketData)}>Zamknij</button>
                 </>
             )}
-        </aside>
+        </div>
     )
 }
