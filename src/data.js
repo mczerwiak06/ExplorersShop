@@ -24,7 +24,7 @@ const data = {
         },
         {
             id: '3',
-            name: 'DMM Dragon Cam 3 (Red)',
+            name: 'DMM Dragon Cam 3 (DarkRed)',
             price: 250.29,
             image: 'https://www.skubank.com/imagestore/product/11981/33/160784/c63_11981_A7353A-dragon-cam-3.jpg',
             details: 'Friend wspinaczkowy DMM Dragon Cam Size 3 posiada kuty na gorąco zacisk kciuka. Zapewnia ' +
@@ -54,7 +54,7 @@ const data = {
         },
         {
             id: '6',
-            name: 'Lina Beal 9,1mm 50m',
+            name: 'Lina Beal Extreme 9,1mm 50m',
             price: 500.99,
             image: 'https://8a.pl/media/catalog/product/l/i/lina-wspinaczkowa-beal-joker-9-1-mm-50m-unicore-dry-cover-orange-1653292780.jpg',
             details: 'Jako lina pojedyncza Beal Joker 9,1 mm to jeden z cieńszych modeli za którym stoi lekkość asekuracji i wpinek,' +
@@ -66,7 +66,7 @@ const data = {
         },
         {
             id: '7',
-            name: 'Lina Beal 8,5mm 50m',
+            name: 'Lina Beal Sport 8,5mm 50m',
             price: 512.99,
             image: 'https://8a.pl/media/catalog/product/l/i/lina-wspinaczkowa-beal-opera-8-5-mm-50m-unicore-dry-cover-green-1653291587.jpg',
             details: 'Tylko zaawansowane technologie sprawiają, że mimo zaledwie 8,5 mm model ten spełnia wszystkie normy dotyczące właśnie' +
@@ -84,7 +84,7 @@ const data = {
         },
         {
             id: '8',
-            name: 'Lina Beal 9,8mm 70m',
+            name: 'Lina Beal Pro Max 9,8mm 70m',
             price: 566.99,
             image: 'https://8a.pl/media/catalog/product/l/i/lina-wspinaczkowa-beal-karma-9-8-mm-70m-yellow-1653291831.jpg',
             details: 'Model ten pozbawiony jest powłok impregnujących, dlatego najlepiej spisze się właśnie w skałach - latem.' +
@@ -104,7 +104,7 @@ const data = {
         },
         {
             id: '9',
-            name: 'Zestaw ekspresów CT',
+            name: 'Zestaw ekspresów CT blue 6 szt.',
             price: 350.99,
             image: 'https://8a.pl/media/catalog/product/z/e/zestaw-ekspresow-climbing-technology-aerial-pro-set-dy-12-cm-x6-1650530888.jpg',
             details: 'Zestaw ekspresów Climbing Technology Aerial PRO Set DY 12 cm x6 składa się kilku doskonale współpracujących' +
@@ -118,7 +118,7 @@ const data = {
         },
         {
             id: '10',
-            name: 'Woreczek na magnezję',
+            name: 'Woreczek na magnezję Small',
             price: 54.99,
             image: 'https://8a.pl/media/catalog/product/w/o/woreczek-na-magnezje-e9-aglio-c-wine-1652775810.jpg',
             details: 'Woreczek na magnezję E9 Aglio C doskonale spisze się w najtrudniejszych warunkach. Dzięki niemu zyskasz szybki' +
@@ -126,7 +126,7 @@ const data = {
         },
         {
             id: '11',
-            name: 'Czekan Grivel Ghost Evo',
+            name: 'Czekan Grivel Ghost Evo Hammer',
             price: 386.99,
             image: 'https://8a.pl/media/catalog/product/c/z/czekan_grivel_ghost_evo_hammer_yellow_1631185462_d030.jpg',
             details: 'Czekan Grivel Ghost Evo Hammer spisze się zarówno w turystyce wysokogórskiej, wspinaczce' +
@@ -139,7 +139,7 @@ const data = {
         },
         {
             id: '12',
-            name: 'Czekan Grivel G Zero',
+            name: 'Czekan Grivel G Zero Hammer',
             price: 236.99,
             image: 'https://8a.pl/media/catalog/product/c/z/czekan_grivel_g_zero_pink_1631282594_0c52.jpg',
             details: 'Czekan Grivel G Zero posiada głowicę wykonaną ze stali węglowej, która cechuje się świetną' +
@@ -207,7 +207,7 @@ const data = {
         },
         {
             id: '17',
-            name: 'Szabla śnieżna CT 50cm',
+            name: 'Szabla śnieżna CT Pro 50cm',
             price: 127.91,
             image: 'https://8a.pl/media/catalog/product/s/z/szabla_sniezna_climbing_technology_snow_anchor_50cm_1646210179_385d.jpg',
             details: 'Szabla śnieżna Climbing Technology Snow Anchor 50cm to niezawodna szabla śnieżna, która umożliwi założenie' +
@@ -219,7 +219,7 @@ const data = {
         },
         {
             id: '18',
-            name: 'Lonża do czekana Grivel',
+            name: 'Lonża do czekana Grivel Extreme',
             price: 168.47,
             image: 'https://8a.pl/media/catalog/product/l/o/lonza_grivel_double_spring_screw_lock_1570447927_4c6c.jpg',
             details: 'Lonża do czekana Grivel Double Spring ma prostą konstrukcję. W pierwszej chwili sprawia wrażenie niepozornej,' +

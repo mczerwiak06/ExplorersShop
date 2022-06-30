@@ -8,9 +8,9 @@ export default function Product(props) {
             <img className="small" src={product.image} alt={product.name}></img>
             <h3>{product.name}</h3>
             <div>{product.price}zł</div>
-            <div>
-                <button onClick={() => onAdd(product)}>Dodaj do koszyka</button>
-                <button onClick={() => {
+            <div className="product_buttons">
+                <button className="product_button" onClick={() => onAdd(product)}>Dodaj do koszyka</button>
+                <button className="product_button" onClick={() => {
                     onDetails(product);
                     productToApp(dataToPass);
                     getProductDataFromProduct(product);

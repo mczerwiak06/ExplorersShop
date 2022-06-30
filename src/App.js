@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import {Routes, Route} from "react-router-dom";
 import Shipping from "./components/Shipping";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 
 export default function App() {
@@ -115,6 +116,7 @@ export default function App() {
                     <Route path="/home" element={<Home/>}/>
                 </Routes>
             </div>
+            <Footer/>
         </div>
     )
 }

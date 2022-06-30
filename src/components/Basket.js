@@ -3,7 +3,7 @@ import React from "react";
 export default function Basket(props) {
     const {cartItems, onAdd, onRemove, closeBasket} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-    const shippingPrice = itemsPrice > 300 ? 0 : 20;
+    const shippingPrice = itemsPrice > 200 ? 0 : 20;
     const taxPrice = itemsPrice * 0.23;
     const totalPrice = itemsPrice + shippingPrice;
     const closeBasketData = 1;

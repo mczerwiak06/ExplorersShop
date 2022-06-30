@@ -11,19 +11,12 @@ export default function Main(props) {
     }
     return (
         <main className="products">
-            <div>
-                <h2>Nasze produkty</h2>
-
-            </div>
-
             <div className="products">
-
                 {products.map((product) => (
                     <Product key={product.id} product={product} onAdd={onAdd} onDetails={onDetails}
                              productToApp={productToApp} closeProductDetails={closeProductDetails}
                              getProductDataFromProduct={getProductDataFromProduct}/>
                 ))}
-
             </div>
         </main>
     )

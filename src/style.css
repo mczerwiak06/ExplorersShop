@@ -1,5 +1,24 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    /*font-family: Helvetica, Arial, sans-serif;*/
+    font-family:  Helvetica, sans-serif;
+    background-color: white;
+    /*background-image: url("/public/alpinizm.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid dimgrey;
+    margin: auto;
+    max-width: 70%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h1, h2, h3 {
@@ -20,14 +39,17 @@ h3 {
 
 a {
     text-decoration: none;
+    color: indigo;
+}
+a:hover {
+    color: red;
 }
 
-/*.row{*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: space-between;*/
-/*    padding-left: 30px;*/
-/*}*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+}
 
 .col-1 {
     flex: 1;
@@ -38,30 +60,34 @@ a {
 }
 
 .block {
-    /*display: flex;*/
     background-color: lightgray;
     padding: 1rem;
     margin: 0.5rem;
     border-radius: 0.5rem;
+    opacity: 0.9;
 }
 
 .product {
     padding: 30px;
-    transition: 2s;
-    max-width: 200px;
-    max-height: 200px;
+    transition: 1s;
+    width: 200px;
+    height: 200px;
     border-radius: 5px;
     margin-top: 5px;
+    color: goldenrod;
+    border: 1px solid dimgrey;
 }
 
-/*.row.center{*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    align-items: center;*/
-/*}*/
+.row.center{
+    display: flex;
+    align-items: center;
+}
 
 img.small {
     max-height: 8rem;
+}
+img.large {
+    max-height: 15rem;
 }
 
 .basket {
@@ -73,26 +99,104 @@ img.small {
     align-items: center;
 }
 
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.row.center {
-    align-items: center;
-}
-
 .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: lightgray;
-    /*margin: 0.5rem;*/
+    margin: auto;
     border-radius: 0.5rem;
     max-width: 70%;
+    opacity: 0.9;
+    padding: 10px;
+    margin-right: 50px;
 }
 
 .product:hover {
     background-color: dimgrey;
+}
 
+.product_details {
+    margin: auto;
+    width: 50%;
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    opacity: 0.9;
+}
+
+.product_button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid #ff4742;
+    color: #fff;
+    background-color: #ff4742;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 200;
+    font-size: 12px;
+    height: 16px;
+    text-align: center;
+    padding-bottom: 14px;
+}
+
+.product_button:hover {
+    background: 0 0;
+    color: #ff4742;
+}
+.basket_button:hover {
+    background: 0 0;
+    color: #ff4742;
+}
+
+.product_buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.home, .contact, .shipping {
+    width: 450px;
+    padding-top: 50px;
+}
+
+.footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    height: 40px;
+    border: 1px solid dimgrey;
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+    justify-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header_title {
+    color: goldenrod;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: flex-start;
+}
+.link {
+    padding-left: 8px;
+}
+.basket_button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid #ff4742;
+    color: #fff;
+    background-color: #ff4742;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 200;
+    font-size: 12px;
+    height: 30px;
+    width: 50px;
+    text-align: center;
 }
