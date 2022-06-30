@@ -26,18 +26,20 @@ export default function ProductDetails(props) {
                 </div>
             ))}
             <form>
+                <div className="product_details_form">
                 <input
                     type='text'
                     placeholder='1'
                     onChange={handleChange}
                 />
-                <button onClick={() => closeProductDetails(closeData)}>Zamknij</button>
-                <button type="button" onMouseOver={() => {
+                <button className="details_button" type="button" onMouseOver={() => {
                     passQuantity(quantity)
                 }} onClick={() => {
                     onAdd(productDataFromMainToProduct)
                 }}>Do koszyka
                 </button>
+                <button className="details_button" onClick={() => closeProductDetails(closeData)}>Zamknij</button>
+                </div>
             </form>
         </aside>
     )

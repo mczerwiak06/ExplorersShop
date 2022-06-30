@@ -12,8 +12,8 @@ export default function Basket(props) {
             <h2>Twój koszyk</h2>
             <div>
                 {cartItems.length === 0 && <div>
-                    <div>Koszyk pusty. Jak to możliwe?</div>
-                    <button onClick={() => closeBasket(closeBasketData)}>Zamknij</button>
+                    <div className="empty_basket">Koszyk pusty. Jak to możliwe?</div>
+                    <button className="checkout" onClick={() => closeBasket(closeBasketData)}>Zamknij</button>
                 </div>}
 
             </div>
@@ -21,8 +21,10 @@ export default function Basket(props) {
                 <div key={item.id} className="row">
                     <div className="col-2"> {item.name}</div>
                     <div className="col-2">
-                        <button onClick={() => onAdd(item)} className="add">+</button>
-                        <button onClick={() => onRemove(item)} className="remove">-</button>
+                        <div className="add_minus_buttons">
+                            <button onClick={() => onAdd(item)} className="add">+</button>
+                            <button onClick={() => onRemove(item)} className="remove">-</button>
+                        </div>
                     </div>
                     <div className="col-2 text-rig">
                         {item.qty} x {item.price.toFixed(2)} zł
@@ -49,10 +51,10 @@ export default function Basket(props) {
                         <div className="col-1 text-right"><strong>{totalPrice.toFixed(2)} zł</strong></div>
                     </div>
                     <hr/>
-                    <div className="row">
-                        <button onClick={() => alert("Implement checkout")}>Checkout</button>
+                    <div className="basket_buttons">
+                        <button className="checkout" onClick={() => alert("Implement checkout")}>Zamawiam</button>
+                        <button className="checkout" onClick={() => closeBasket(closeBasketData)}>Zamknij</button>
                     </div>
-                    <button onClick={() => closeBasket(closeBasketData)}>Zamknij</button>
                 </>
             )}
         </div>
