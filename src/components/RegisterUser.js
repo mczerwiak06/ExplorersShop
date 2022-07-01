@@ -128,7 +128,7 @@ export default function RegisterUser(props) {
             <div>
                 {orderVisible && <div>
                     <h2>Dziękujemy za złożenie zamówienia.</h2>
-                    <h3>Towar zostanie wysłany na poniższe dane, po zaksięgowaniu wpłaty:</h3>
+                    <h3>Po zaksięgowaniu wpłaty, towar zostanie wysłany na poniższe dane:</h3>
                     <div className="customer_data">
                         <p>{firstName} {lastName}</p>
                         <p>{address}</p>
