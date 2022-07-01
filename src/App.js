@@ -9,12 +9,14 @@ import {Routes, Route} from "react-router-dom";
 import Shipping from "./components/Shipping";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import RegisterUser from "./components/RegisterUser";
 
 
 export default function App() {
-    const [basketVisible, setBaketVisible] = useState(false);
+    const [basketVisible, setBasketVisible] = useState(false);
     const [detailsVisible, setDetailsVisible] = useState(false);
     const [mainVisible, setMainVisible] = useState(true);
+    const [orderFormVisible, setOrderFormVisible] = useState(false);
 //przekazanie obiektu product z Main
     const [productDataFromMainToProduct, setProductDataFromMainToProduct] = useState(null);
     const getProductDataFromMain = (product1) => {
@@ -48,20 +50,20 @@ export default function App() {
 
     const onDetails = (product) => {
         setItemDetails([product]);
-
     }
     //wyświetlenie koszyka
     const childToParent = (childdata) => {
-        setBaketVisible(true);
+        setBasketVisible(true);
         setMainVisible(false);
         setDetailsVisible(false);
+        setOrderFormVisible(false);
     }
     //zamknięcie koszyka
     const closeBasket = (basketCloseData) => {
-        setBaketVisible(false);
+        setBasketVisible(false);
         setMainVisible(true);
+        setOrderFormVisible(false);
     }
-
     //obsługa koszyka
     const {products} = data;
     const [cartItems, setCartItems] = useState([]);
@@ -95,21 +97,35 @@ export default function App() {
             );
         }
     }
+    const checkout = (checkoutData) => {
+        setBasketVisible(false);
+        setOrderFormVisible(true);
+    }
+
+    const closeRegisterUser = (closeData) => {
+        setOrderFormVisible(false);
+        setMainVisible(true);
+    }
+    const basketData = (closeData) => {
+        setCartItems([]);
+    }
 
     return (
-
         <div className="App">
             <Header childToParent={childToParent} countCartItems={cartItems.length}/>
             <div className="row">
                 {mainVisible && <Main onAdd={onAdd} onDetails={onDetails} productToApp={productToApp}
                                       getProductDataFromMain={getProductDataFromMain} products={products}/>}
                 {basketVisible &&
-                    <Basket onAdd={onAdd} onRemove={onRemove} closeBasket={closeBasket} cartItems={cartItems}/>}
+                    <Basket onAdd={onAdd} onRemove={onRemove} closeBasket={closeBasket} checkout={checkout}
+                            cartItems={cartItems}/>}
                 {detailsVisible &&
                     <ProductDetails onAdd={onAdd} onRemove={onRemove} closeProductDetails={closeProductDetails}
                                     passQuantity={passQuantity}
                                     itemDetails={itemDetails}
                                     productDataFromMainToProduct={productDataFromMainToProduct}/>}
+                {orderFormVisible &&
+                    <RegisterUser checkout={checkout} closeRegisterUser={closeRegisterUser} basketData={basketData}/>}
                 <Routes>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/shipping" element={<Shipping/>}/>

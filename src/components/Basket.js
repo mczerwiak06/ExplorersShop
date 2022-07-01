@@ -1,12 +1,13 @@
 import React from "react";
 
 export default function Basket(props) {
-    const {cartItems, onAdd, onRemove, closeBasket} = props;
+    const {cartItems, onAdd, onRemove, closeBasket, checkout} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
     const shippingPrice = itemsPrice > 200 ? 0 : 20;
     const taxPrice = itemsPrice * 0.23;
     const totalPrice = itemsPrice + shippingPrice;
     const closeBasketData = 1;
+    const checkoutData = 1;
     return (
         <div className="block col-1">
             <h2>Twój koszyk</h2>
@@ -52,7 +53,7 @@ export default function Basket(props) {
                     </div>
                     <hr/>
                     <div className="basket_buttons">
-                        <button className="checkout" onClick={() => alert("Implement checkout")}>Zamawiam</button>
+                        <button className="checkout" onClick={() => checkout(checkoutData)}>Zamawiam</button>
                         <button className="checkout" onClick={() => closeBasket(closeBasketData)}>Zamknij</button>
                     </div>
                 </>

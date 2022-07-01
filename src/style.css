@@ -284,7 +284,7 @@ ul li::before {
     background-color: #ff4742;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
     font-weight: 200;
-    font-size: 9px;
+    font-size: 12px;
     height: 20px;
     width: 20px;
     text-align: center;
@@ -298,4 +298,31 @@ ul li::before {
 .add_minus_buttons {
     display: flex;
     gap: 10px;
+}
+
+.sending_form_field {
+    margin-left: 180px;
+    display: flex;
+    padding-bottom: 25px;
+
+}
+
+.form_input {
+    margin-left: 170px;
+    position: absolute;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 300px;
+}
+
+.payment {
+    padding-bottom: 30px;
+    color: red;
+}
+.customer_data {
+    padding-left: 50px;
 }

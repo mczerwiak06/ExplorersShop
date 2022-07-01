@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Home(){
-    return(
+export default function Home() {
+    return (
         <div className="home">
             <h2>Witaj na stronie sklepu ExplorersShop</h2>
             <p>Posiadamy bogaty asortyment turystyczno - wspinaczkowy.</p>

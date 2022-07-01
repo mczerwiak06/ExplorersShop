@@ -24,7 +24,8 @@ export default function Header(props) {
             </div>
             <div>
                 <div>
-                    <button className="basket_button" onClick={() => childToParent(data)}>{countCartItems}<FontAwesomeIcon icon={faCartShopping}/>
+                    <button className="basket_button"
+                            onClick={() => childToParent(data)}>{countCartItems}<FontAwesomeIcon icon={faCartShopping}/>
                     </button>
                 </div>
             </div>

@@ -21,24 +21,22 @@ export default function ProductDetails(props) {
                         <div>{item.price}zł</div>
                         <div>{item.details}</div>
                     </div>
-
-
                 </div>
             ))}
             <form>
                 <div className="product_details_form">
-                <input
-                    type='text'
-                    placeholder='1'
-                    onChange={handleChange}
-                />
-                <button className="details_button" type="button" onMouseOver={() => {
-                    passQuantity(quantity)
-                }} onClick={() => {
-                    onAdd(productDataFromMainToProduct)
-                }}>Do koszyka
-                </button>
-                <button className="details_button" onClick={() => closeProductDetails(closeData)}>Zamknij</button>
+                    <input
+                        type='text'
+                        placeholder='1'
+                        onChange={handleChange}
+                    />
+                    <button className="details_button" type="button" onMouseOver={() => {
+                        passQuantity(quantity)
+                    }} onClick={() => {
+                        onAdd(productDataFromMainToProduct)
+                    }}>Do koszyka
+                    </button>
+                    <button className="details_button" onClick={() => closeProductDetails(closeData)}>Zamknij</button>
                 </div>
             </form>
         </aside>

@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Shipping(){
-    return(
+export default function Shipping() {
+    return (
         <div className="shipping">
             <h2>Dostawa</h2>
             <ul>
